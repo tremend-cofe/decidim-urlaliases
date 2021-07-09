@@ -3,7 +3,7 @@
 module Decidim
   module UrlAliases
     class RouteRecognizer
-      VALID_SOURCE_REGEX = %r{\A/[0-9a-zA-Z_\-]+\z}
+      VALID_SOURCE_REGEX = %r{\A/([0-9a-zA-Z_\-]+\/?)+\z}
       NEW_RESERVED_PATHS = %w().freeze unless const_defined?(:NEW_RESERVED_PATHS)
       WHITELISTED_PREFIXES = %w(/uploads).freeze unless const_defined?(:WHITELISTED_PREFIXES)
 
